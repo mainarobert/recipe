@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'app.apps.AppConfig',
     'user.apps.UserConfig',
+    'crispy_forms',
 
 ]
 
@@ -59,7 +60,9 @@ ROOT_URLCONF = 'recipeapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join((BASE_DIR, 'templates'))],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,10 +126,14 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES = [
-    os.path.join((BASE_DIR, 'static'))
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = 'login'
