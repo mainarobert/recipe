@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'app.apps.AppConfig',
     'user.apps.UserConfig',
     'crispy_forms',
+    'markdownx',
 
 ]
 

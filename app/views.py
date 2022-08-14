@@ -1,7 +1,25 @@
+from multiprocessing import context
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 # Create your views here.
 
-def displayApp(request):
-    return HttpResponse('<h1>This is App response</h1>')
+def home(request):
+    context = {}
+    return render(request,'app/index.html', context)
+
+def detail(request, id):
+    context = {}
+    return render(request, 'app/detail.html', context)
+
+def create(request):
+    context = {}
+    return render(request, 'app/create.html', context)
+
+def update(request):
+    context = {}
+    return render(request, 'app/update.html', context)
+
+def delete(request):
+    context = {}
+    return render(request, 'app/delete.html', context)
