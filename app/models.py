@@ -19,3 +19,10 @@ class Recipe(models.Model):
     def __str__(self):
         return self.name
 
+    @property
+    def formatted_ingredients(self):
+        return self.ingredients    
+        
+    @property
+    def formatted_directions(self):
+        return self.directions
