@@ -1,3 +1,4 @@
+<!-- app/create.html -->
 {% extends 'base.html' %}
 {% block content %}
 {% load crispy_forms_tags %}
@@ -6,7 +7,7 @@
     <h4>New Recipe</h4>
     <p><i>Note: The Ingredients and Directions fields are Markdown Supported. Learn more about markdown <a href="https://www.markdownguide.org/cheat-sheet/" target="_blank" style="text-decoration: none;">here</a>.</i></p>
     <br>
-        <form method="post" enctype="multipart/form-data">
+        <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="row">
                 <div class="col-6">
@@ -47,6 +48,5 @@
                 <button type="submit" class="btn btn-success">Post Recipe</button>
             </div>
         </form>
-   
     {{ form.media }}
 </div>{% endblock %}

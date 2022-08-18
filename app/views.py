@@ -5,6 +5,14 @@ from markdownx.utils import markdownify
 from .models import *
 from .forms import *
 
+def home(request):
+    recipes = Recipe.objects.all()
+    context = {
+        'recipes': recipes,
+    }
+    return render(request, 'app/index.html', context)
+
+
 @login_required
 def create(request):
     context = {}
@@ -84,6 +92,3 @@ def delete(request, id):
             'name': name
         }
         return render(request, 'app/delete.html', context)
-
-def home(request):
-    return render(request, 'app/index.html')
