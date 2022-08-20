@@ -5,7 +5,7 @@
 <br class="mt-0 mb-4">
 <div class="container">
     <h4>New Recipe</h4>
-    <p><i>Note: The Ingredients and Directions fields are Markdown Supported. Learn more about markdown <a href="https://www.markdownguide.org/cheat-sheet/" target="_blank" style="text-decoration: none;">here</a>.</i></p>
+    <!-- <p><i>Note: The Ingredients and Directions fields are Markdown Supported. Learn more about markdown <a href="https://www.markdownguide.org/cheat-sheet/" target="_blank" style="text-decoration: none;">here</a>.</i></p> -->
     <br>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
@@ -48,5 +48,4 @@
                 <button type="submit" class="btn btn-success">Post Recipe</button>
             </div>
         </form>
-    {{  form|crispy  }}
 </div>{% endblock %}

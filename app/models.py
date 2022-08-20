@@ -1,5 +1,4 @@
 from django.db import models
-from markdownx.models import MarkdownxField
 from django.contrib.auth.models import User
 
 # Create your models here.
@@ -11,8 +10,8 @@ class Recipe(models.Model):
     cook = models.CharField(max_length=255)
     servings = models.IntegerField(default=1, null=True, blank=True)
     image = models.ImageField(upload_to='media/')
-    ingredients = MarkdownxField()
-    directions = MarkdownxField()
+    ingredients = models.TextField()
+    directions = models.TextField()
     notes = models.TextField(null=True, blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
