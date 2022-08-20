@@ -22,7 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
     path('user/', include('user.urls')),
-    path('markdownx/', include('markdownx.urls')),
 ]
 
 if settings.DEBUG:
