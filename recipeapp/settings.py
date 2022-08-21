@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+&np0)%m&!^57jl=8_ejh&@_p86ee62irwd+05l*3*7f9hwx7*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['chakula-recipe-heroku.herokuapp.com']
 
 
 # Application definition
